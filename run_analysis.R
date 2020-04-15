@@ -45,6 +45,5 @@ condensedtable <- aggregate(meanstddata[,-(1:2)], by = list(meanstddata$Subject,
 library(dplyr)
 condensedtable <- rename(condensedtable, Subject = Group.1, Activity = Group.2)
 
-##Write tables to directory to save them
-write.table(meanstddata, "./meanstdacceldata.txt", row.name=FALSE)
 write.table(condensedtable, "./tidymeanstdacceldata.txt", row.name=FALSE)
+View(condensedtable)
